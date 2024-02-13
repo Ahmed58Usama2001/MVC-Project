@@ -1,0 +1,27 @@
+﻿@model Department
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create New Department</h1>
+
+<br />
+
+<form asp-action="Create">
+
+    <partial name="PartialViews/CreateEditDepartmentPartial" />
+
+    <div class="mt-3 ">
+        <input class="btn btn-primary" type="submit" value="Create" />
+        <a class="btn btn-light" asp-controller="Department" asp-action="Index">Back To List</a>
+    </div>
+</form>
+
+
+@section ValidationScriptSection {
+    <partial name="_ValidationScriptsPartial" />
+
+    @*   <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script> *@
+}
